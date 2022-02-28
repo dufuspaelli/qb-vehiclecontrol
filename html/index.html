@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Olli-Pekka Lehtinen</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'>
+<link rel='stylesheet' href='https://unpkg.com/vuetify@2.x/dist/vuetify.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Material+Icons'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css'>
+<link rel="stylesheet" href="./style.css">
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script type="text/x-template" id="app-template">
+  <v-app>
+    <v-container>
+      <template >
+        <v-footer v-if="show" absolute class="d-flex align-center align-content-center">
+          <div class="mx-auto">
+        <div class="text-center">
+            <v-btn
+            retain-focus-on-click
+             @click="actionHandle('door', 0)"
+            color="indigo"
+            class="ma-2 py-8 white--text"
+          ><v-icon
+              center
+              dark
+              x-large
+            >
+              door_back
+            </v-icon>
+          </v-btn>
+           <v-btn
+            @click="actionHandle('seat', -1)"
+            color="indigo"
+            x-large
+            class="ma-2 pa-8 white--text"
+          ><v-icon
+              x-large
+              center
+              dark
+            >
+              mdi-steering
+            </v-icon>
+          </v-btn>
+          <v-btn
+                 @click="actionHandle('seat', 0)"
+            color="indigo"
+            x-large
+            class="ma-2 pa-8 white--text"
+          ><v-icon
+              x-large
+              center
+              dark
+            >
+               mdi-seat
+            </v-icon>
+          </v-btn>
+          <v-btn
+             @click="actionHandle('door', 1)"
+            color="indigo"
+            class="ma-2 py-8 white--text"
+          ><v-icon
+              center
+              dark
+              x-large
+            >
+              door_front
+            </v-icon>
+          </v-btn>
+        </div>
+        <div class="text-center">
+            <v-btn
+                   @click="actionHandle('door', 2)"
+            color="indigo"
+            class="ma-2 py-8 white--text"
+          ><v-icon
+              center
+              dark
+              x-large
+            >
+              door_back
+            </v-icon>
+          </v-btn>
+          <v-btn
+                 @click="actionHandle('seat', 1)"
+            color="indigo"
+            x-large
+            class="ma-2 pa-8 white--text"
+          ><v-icon
+              x-large
+              center
+              dark
+            >
+                mdi-seat
+            </v-icon>
+          </v-btn>
+          <v-btn
+            @click="actionHandle('seat', 2)"
+            color="indigo"
+            x-large
+            class="ma-2 pa-8 white--text"
+          ><v-icon
+              x-large
+              center
+              dark
+            >
+                mdi-seat
+            </v-icon>
+          </v-btn>
+          <v-btn
+            color="indigo"
+            x-large
+            @click="actionHandle('seat', 3)"
+            class="ma-2 pa-8 white--text"
+          ><v-icon
+              x-large
+              center
+              dark
+            >
+                mdi-seat
+            </v-icon>
+          </v-btn>
+          <v-btn
+            @click="actionHandle('door', 3)"
+            color="indigo"
+            class="ma-2 py-8 white--text"
+          ><v-icon
+              center
+              dark
+              x-large
+            >
+              door_front
+            </v-icon>
+          </v-btn>
+        </div>
+                <div class="text-center">
+                 <v-btn
+            @click="actionHandle('engine', engine)"
+            :color="!engine ? 'green' : 'grey'"
+            x-large
+            class="ma-2 pa-8 white--text"
+          ><v-icon
+              x-large
+              center
+              dark
+            >
+                mdi-engine
+            </v-icon>
+          </v-btn>
+          <v-btn
+            @click="actionHandle('door', 4)"
+            color="indigo"
+            x-large
+            class="ma-2 pa-8 white--text"
+          ><v-icon
+              x-large
+              center
+              dark
+            >
+                mdi-car
+            </v-icon>
+          </v-btn>
+          <v-btn
+            @click="actionHandle('door', 5)"
+            color="indigo"
+            x-large
+            class="ma-2 pa-8 white--text"
+          ><v-icon
+              x-large
+              center
+              dark
+            >
+                mdi-car-back
+            </v-icon>
+          </v-btn>
+        </div>
+  </div>
+          </v-footer>
+      </template>
+    </v-container>
+  </v-app>
+</script>
+
+<div id="app"></div>
+<!-- partial -->
+  <script src='https://unpkg.com/vue@2.x/dist/vue.js'></script>
+<script src='https://unpkg.com/vuetify@2.x/dist/vuetify.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
