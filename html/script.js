@@ -12,7 +12,7 @@ const App = {
   }),
   mounted() { 
     this.listener = window.addEventListener('keyup', (ev) => {
-      if (ev.key == 'Escape') {
+      if (ev.key == 'Escape' || ev.key == "g") {
         this.show = false
         const requestOptions = {
           method: "POST",
